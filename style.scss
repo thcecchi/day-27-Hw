@@ -1,0 +1,38 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+section, aside {
+  display: inline-block;
+  vertical-align: top;
+}
+section {
+  width: 75%;
+  padding-left: 10%;
+}
+
+aside {
+  width: 23%;
+}
+
+form {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+article {
+
+  input {
+    display: block;
+    margin-top: 1%;
+    margin-bottom: 1%;
+  }
+}
+
+.sendEdit {
+  display: none;
+}

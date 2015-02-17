@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Backbone Views</title>
+    <link rel="stylesheet" href="compiledStyle.css">
+    <script type="text/template" id="postTmpl">
+
+      <div id="mainContent">
+        <h2 rel="title"><%= title %></h2>
+        <p rel="content"><%= content %></p>
+        <blockquote rel="author"><%= author %></blockquote>
+      </div>
+
+      <form id="updatePost" action="">
+        <p><input type="text" name="editTitle" value="<%= title %>" placeholder="Title"></p>
+        <p><textarea name="editContent"  placeholder="Content"></textarea></p>
+        <p><input type="text" name="editAuthor" value="<%= author %>" placeholder="Author"></p>
+      </form>
+
+        <button class="deletePost" name="delete">Delete</button>
+        <button class="editPost" name="edit">Edit</button>
+        <button class="sendEdit" name="sendEdit">Submit</button>
+
+    </script>
+  </head>
+  <body>
+
+    <section>
+      <h1>This is where posts go</h1> <button class="showCreate" name="addPost">Add Post</button>
+      <form id="createPost" action="">
+        <p>
+          <input type="text" name="newTitle" value="" placeholder="Title">
+        </p>
+        <p>
+          <textarea name="newContent" placeholder="Content"></textarea>
+        </p>
+        <p>
+          <input type="text" name="newAuthor" value="" placeholder="Author">
+        </p>
+        <p><button class="createPost" type="submit" name="submit">Create new Post</button></p>
+
+      </form>
+
+    </section>
+    <aside>
+      <div class="box">
+        <h3>This is the sidebar</h3>
+      </div>
+    </aside>
+
+    <!-- libraries -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/underscore/underscore.js"></script>
+    <script src="bower_components/backbone/backbone.js"></script>
+    <!-- app files -->
+    <script src="models.js"></script>
+    <script src="collections.js"></script>
+    <script src="views.js"></script>
+    <script src="main.js"></script>
+
+  </body>
+</html>
