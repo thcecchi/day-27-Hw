@@ -2,7 +2,7 @@
 
 var PostView = Backbone.View.extend({
   template: _.template($('#postTmpl').html()),
-  tagName: 'article',
+  tagName: 'article class="large-4 columns"',
   initialize: function () {
     console.log(this.el)
   },
@@ -33,8 +33,9 @@ var PostView = Backbone.View.extend({
     e.preventDefault()
     this.model.set({
       title: this.$el.find('input[name="editTitle"]').val(),
+      img: this.$el.find('input[name="editImg"]').val(),
       content: this.$el.find('textarea[name="editContent"]').val(),
-      author: this.$el.find('input[name="editAuthor"]').val()
+      director: this.$el.find('input[name="editAuthor"]').val()
     })
     this.model.save();
 
@@ -66,13 +67,15 @@ var AppView = Backbone.View.extend({
     e.preventDefault();
     var newPost = {
       title: $('#createPost').find('input[name="newTitle"]').val(),
+      img: $('#createPost').find('input[name="newImg"]').val(),
       content: $('#createPost').find('textarea[name="newContent"]').val(),
-      author: $('#createPost').find('input[name="newAuthor"]').val()
+      director: $('#createPost').find('input[name="newAuthor"]').val()
     };
 
     var newModelPost = new PostModel(newPost)
     newModelPost.save();
     this.collection.add(newModelPost)
+    this.$el.find('article').remove();
     this.addAllPost();
     // this.addOnePost(newModelPost); // alternative method
     this.$el.find('#createPost').find('input', 'textarea').val('');

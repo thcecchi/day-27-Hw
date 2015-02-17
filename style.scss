@@ -3,17 +3,20 @@ body {
   padding: 0;
 }
 
-section, aside {
-  display: inline-block;
-  vertical-align: top;
+.row {
+  margin: 0;
+  padding: 0;
+  max-width: 10000px;
 }
-section {
-  width: 75%;
-  padding-left: 10%;
+
+.mainHeader {
+  height: 100px;
+  background: tomato;
 }
 
 aside {
-  width: 23%;
+  background: tomato;
+  height: 900px;
 }
 
 form {
@@ -25,6 +28,8 @@ form {
 }
 
 article {
+  display: inline-block;
+  text-align: center;
 
   input {
     display: block;

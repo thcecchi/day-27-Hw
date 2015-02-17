@@ -1,4 +1,4 @@
 var PostCollection = Backbone.Collection.extend({
-  url: 'http://tiy-fee-rest.herokuapp.com/collections/tc-bb-hw',
+  url: 'http://tiy-fee-rest.herokuapp.com/collections/tylerbb2',
   model: PostModel
 })

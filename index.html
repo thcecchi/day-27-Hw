@@ -2,52 +2,56 @@
 <html>
   <head>
     <title>Backbone Views</title>
+    <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
     <link rel="stylesheet" href="compiledStyle.css">
     <script type="text/template" id="postTmpl">
-
-      <div id="mainContent">
+    <div class="row">
         <h2 rel="title"><%= title %></h2>
+        <img src="<%= img %>">
         <p rel="content"><%= content %></p>
-        <blockquote rel="author"><%= author %></blockquote>
-      </div>
+        <blockquote rel="director"><%= director %></blockquote>
 
       <form id="updatePost" action="">
         <p><input type="text" name="editTitle" value="<%= title %>" placeholder="Title"></p>
+        <p><input type="text" name="editImg" value="<%= img %>" placeholder="Image Url"></p>
         <p><textarea name="editContent"  placeholder="Content"></textarea></p>
-        <p><input type="text" name="editAuthor" value="<%= author %>" placeholder="Author"></p>
+        <p><input type="text" name="editDirector" value="<%= director %>" placeholder="Director"></p>
       </form>
 
         <button class="deletePost" name="delete">Delete</button>
         <button class="editPost" name="edit">Edit</button>
         <button class="sendEdit" name="sendEdit">Submit</button>
-
+    </div>
     </script>
   </head>
   <body>
+  <div class="wrapper">
+    <div class="row">
+      <header class="mainHeader large-12 columns">Main Header Image</header>
+    </div>
 
-    <section>
-      <h1>This is where posts go</h1> <button class="showCreate" name="addPost">Add Post</button>
-      <form id="createPost" action="">
-        <p>
-          <input type="text" name="newTitle" value="" placeholder="Title">
-        </p>
-        <p>
-          <textarea name="newContent" placeholder="Content"></textarea>
-        </p>
-        <p>
-          <input type="text" name="newAuthor" value="" placeholder="Author">
-        </p>
-        <p><button class="createPost" type="submit" name="submit">Create new Post</button></p>
+    <div class="row">
+      <aside id="left" class="sideBarAd large-1 columns">IMAGE</aside>
 
-      </form>
+      <section class="large-10 columns">
 
-    </section>
-    <aside>
-      <div class="box">
-        <h3>This is the sidebar</h3>
-      </div>
-    </aside>
+       <div class="row">
+        <h1 class="siteHeader large-8 columns">This is Where Movies Go</h1><button class="showCreate large-4 columns" name="addPost">Add Post</button>
+        <form id="createPost" action="">
+          <p><input type="text" name="newTitle" value="" placeholder="Title"></p>
+          <p><input type="text" name="newImg" value="" placeholder="Image Url"></p>
+          <p><textarea name="newContent" placeholder="Content"></textarea></p>
+          <p><input type="text" name="newAuthor" value="" placeholder="Author"></p>
+          <p><button class="createPost" type="submit" name="submit">Create new Post</button></p>
+        </form>
+       </div>
 
+      </section>
+
+      <aside id="right" class="sideBarAd large-1 columns">IMAGE</aside>
+    </div>
+
+  </div>
     <!-- libraries -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/underscore/underscore.js"></script>
