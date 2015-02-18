@@ -1,6 +1,11 @@
 body {
+  background: url("../ck.jpg") no-repeat top center fixed;
+  background-size: cover;
+  background-position: 100px -200px;
   margin: 0;
   padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .row {
@@ -9,20 +14,29 @@ body {
   max-width: 10000px;
 }
 
+.mainHeaderContainer {
+  height: 200px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
 .mainHeader {
   height: 100px;
   text-align: center;
-  background: gray;
+  background: crimson;
 }
 
 .siteHeader {
   text-align: center;
 }
 
-aside {
-  background: gray;
-  height: 900px;
-  text-align: center;
+section {
+  margin-top: 15%;
+  background: ghostwhite;
 }
 
 form {
