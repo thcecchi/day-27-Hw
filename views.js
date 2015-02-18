@@ -13,7 +13,7 @@ var PostView = Backbone.View.extend({
   },
   showEdit: function () {
     this.$el.find('.editPost').hide();
-    this.$el.find('#mainContent').hide();
+    // this.$el.find('#mainContent').hide();
 
     this.$el.find('.sendEdit').show();
     this.$el.find('#updatePost').show();
@@ -35,12 +35,12 @@ var PostView = Backbone.View.extend({
       title: this.$el.find('input[name="editTitle"]').val(),
       img: this.$el.find('input[name="editImg"]').val(),
       content: this.$el.find('textarea[name="editContent"]').val(),
-      director: this.$el.find('input[name="editAuthor"]').val()
+      director: this.$el.find('input[name="editDirector"]').val()
     })
     this.model.save();
 
     $('.editPost').show();
-    $('#mainContent').show();
+    // $('#mainContent').show();
 
     $('.sendEdit').hide();
     $('#updatePost').hide();
@@ -69,7 +69,7 @@ var AppView = Backbone.View.extend({
       title: $('#createPost').find('input[name="newTitle"]').val(),
       img: $('#createPost').find('input[name="newImg"]').val(),
       content: $('#createPost').find('textarea[name="newContent"]').val(),
-      director: $('#createPost').find('input[name="newAuthor"]').val()
+      director: $('#createPost').find('input[name="newDirector"]').val()
     };
 
     var newModelPost = new PostModel(newPost)

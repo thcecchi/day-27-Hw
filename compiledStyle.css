@@ -11,6 +11,9 @@ body {
   height: 100px;
   background: tomato; }
 
+.siteHeader {
+  text-align: center; }
+
 aside {
   background: tomato;
   height: 900px; }

@@ -7,7 +7,7 @@
     <script type="text/template" id="postTmpl">
     <div class="row">
         <h2 rel="title"><%= title %></h2>
-        <img src="<%= img %>">
+        <a href="#movie/<%= title %>"><img src="<%= img %>"></a>
         <p rel="content"><%= content %></p>
         <blockquote rel="director"><%= director %></blockquote>
 
@@ -36,13 +36,14 @@
       <section class="large-10 columns">
 
        <div class="row">
-        <h1 class="siteHeader large-8 columns">This is Where Movies Go</h1><button class="showCreate large-4 columns" name="addPost">Add Post</button>
+        <h1 class="siteHeader large-12 columns">This is a Movie Site. HeHey!</h1>
+        <button class="showCreate large-12 columns" name="addPost">Add Movie</button>
         <form id="createPost" action="">
           <p><input type="text" name="newTitle" value="" placeholder="Title"></p>
           <p><input type="text" name="newImg" value="" placeholder="Image Url"></p>
           <p><textarea name="newContent" placeholder="Content"></textarea></p>
           <p><input type="text" name="newAuthor" value="" placeholder="Author"></p>
-          <p><button class="createPost" type="submit" name="submit">Create new Post</button></p>
+          <p><button class="createPost" type="submit" name="submit">Create New Movie</button></p>
         </form>
        </div>
 
@@ -60,6 +61,7 @@
     <script src="models.js"></script>
     <script src="collections.js"></script>
     <script src="views.js"></script>
+    <script src="router.js"></script>
     <script src="main.js"></script>
 
   </body>
