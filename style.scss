@@ -11,7 +11,8 @@ body {
 
 .mainHeader {
   height: 100px;
-  background: tomato;
+  text-align: center;
+  background: gray;
 }
 
 .siteHeader {
@@ -19,8 +20,9 @@ body {
 }
 
 aside {
-  background: tomato;
+  background: gray;
   height: 900px;
+  text-align: center;
 }
 
 form {

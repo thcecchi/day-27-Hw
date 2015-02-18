@@ -9,14 +9,16 @@ body {
 
 .mainHeader {
   height: 100px;
-  background: tomato; }
+  text-align: center;
+  background: gray; }
 
 .siteHeader {
   text-align: center; }
 
 aside {
-  background: tomato;
-  height: 900px; }
+  background: gray;
+  height: 900px;
+  text-align: center; }
 
 form {
   display: none; }

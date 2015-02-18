@@ -1,7 +1,7 @@
 //post model
 
 var PostModel = Backbone.Model.extend({
-  urlRoot: 'http://tiy-fee-rest.herokuapp.com/collections/tylerbb2',
+  urlRoot: 'http://tiy-fee-rest.herokuapp.com/collections/tylerbb3',
   idAttribute: '_id',
   defaults: function () {
     return {
